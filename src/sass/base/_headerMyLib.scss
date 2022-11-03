@@ -1,0 +1,148 @@
+.header-myLib {
+  max-height: 230px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(/src/images/headerMyLib_background_mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: grey;
+  background-size: cover;
+
+  @include retina {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(/src/images/headerMyLib_background_mobile@x2.jpg);
+  }
+
+  @include retina3x {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(/src/images/headerMyLib_background_mobile@x3.jpg);
+  }
+
+  @include tablet {
+    max-height: 219px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(/src/images/headerMyLib_background_tablet.jpg);
+    margin-bottom: 60px;
+
+    @include retina {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(/src/images/headerMyLib_background_tablet@x2.jpg);
+    }
+
+    @include retina3x {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(/src/images/headerMyLib_background_tablet@x3.jpg);
+    }
+  }
+
+  @include desktop {
+    max-height: 219px;
+    max-width: 2000px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(/src/images/headerMyLib_background.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(/src/images/headerMyLib_background@x2.jpg);
+    }
+
+    @include retina3x {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(/src/images/headerMyLib_background@x3.jpg);
+    }
+  }
+}
+
+.headerMylib__container {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 58px;
+  }
+}
+
+.library__btns {
+  // margin-top: 62px;
+  margin-right: -20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    margin-top: 40px;
+    margin-right: -32px;
+  }
+
+  @include desktop {
+    margin-right: -16px;
+  }
+}
+
+.library__button {
+  font-family: 'Roboto';
+  font-style: normal;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: $color-white;
+  line-height: 1.33;
+  font-weight: 500;
+
+  padding-top: 14px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+
+  width: 130px;
+  height: 44px;
+  border: 1px solid $color-white;
+  border-radius: 5px;
+  background: none;
+
+  margin-right: 20px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    width: 152px;
+    height: 44px;
+    padding: 13px, 46px;
+    margin-right: 32px;
+  }
+
+  @include desktop {
+    width: 148px;
+    height: 42px;
+    margin-right: 16px;
+    padding: 12px 41px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ff6b01;
+    border-color: #ff6b01;
+  }
+
+  &[data-queue='active'],
+  &[data-watch='active'] {
+    background-color: #ff6b01;
+    border-color: #ff6b01;
+  }
+}
